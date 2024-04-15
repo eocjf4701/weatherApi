@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 // 1. 앱이 실행되자마자 -> use Effect
 function App() {
@@ -21,7 +22,6 @@ function App() {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKey}`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log("data", data);
   };
 
   useEffect(() => {

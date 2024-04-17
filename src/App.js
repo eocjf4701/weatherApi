@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+
 import WeatherBox from './component/WeatherBox';
+import WeatherButton from './component/WeatherButton';
 
 // 1. 앱이 실행되자마자 -> use Effect
 function App() {
@@ -31,7 +36,10 @@ function App() {
 
   return (
     <div>
-      <WeatherBox />
+      <div className='container'>
+        <WeatherBox />
+        <WeatherButton />
+      </div>
     </div >
   )
 }

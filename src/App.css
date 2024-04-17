@@ -1,6 +1,21 @@
 body {
-  background: url(https://img.freepik.com/free-vector/flat-design-monsoon-season-clouds-illustration_23-2149424294.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713225600&semt=ais);
+  background: url('./images/background.jpg');
   height: 100vh;
   background-repeat: repeat;
   background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.weather-box {
+  border: 3px solid white;
+  padding: 50px;
+  border-radius: 30px;
+  background-color: azure;
 }

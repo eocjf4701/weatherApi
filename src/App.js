@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import './App.css';
+import WeatherBox from './component/WeatherBox';
 
 // 1. 앱이 실행되자마자 -> use Effect
 function App() {
@@ -29,7 +30,9 @@ function App() {
   }, []);
 
   return (
-    < div > start</div >
+    <div>
+      <WeatherBox />
+    </div >
   )
 }
 

@@ -26,9 +26,20 @@ function App() {
   };
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
+
+    setWeather(data);
+  };
+
+  const getWeatherByCity = async (city) => {
+    console.log("city : ", city);
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}&units=metric`;
+    let response = await fetch(url);
+    let data = await response.json();
+
+    setWeather(data);
   };
 
   useEffect(() => {
@@ -38,8 +49,8 @@ function App() {
   return (
     <div>
       <div className='container'>
-        <WeatherBox />
-        <WeatherButton />
+        <WeatherBox weather={weather} />
+        <WeatherButton getWeatherByCity={getWeatherByCity} />
       </div>
     </div >
   )

@@ -10,6 +10,7 @@ import WeatherButton from './component/WeatherButton';
 // 1. 앱이 실행되자마자 -> use Effect
 function App() {
   const weatherApiKey = process.env.REACT_APP_API_KEY;
+  const [weather, setWeather] = useState(null);
 
   const getCurrentLocation = () => {
     if (navigator.geolocation) {

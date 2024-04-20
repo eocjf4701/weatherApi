@@ -11,7 +11,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 function App() {
   const weatherApiKey = process.env.REACT_APP_API_KEY;
   const [weather, setWeather] = useState(null);
-  const cities = ['paris', 'new york', 'tokyo', 'seoul'];
+  const cities = ['Vancouver', 'Seoul', 'Incheon', 'Yongin'];
   const override: CSSProperties = {
     display: "block",
     margin: "0 auto",

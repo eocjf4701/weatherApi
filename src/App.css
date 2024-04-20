@@ -20,3 +20,7 @@ body {
   background-color: azure;
   margin-bottom: 5px;
 }
+
+.button-child {
+  margin-right: 10px;
+}
